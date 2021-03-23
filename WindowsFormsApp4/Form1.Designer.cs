@@ -94,7 +94,7 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(143, 38);
             this.progressBar1.TabIndex = 3;
-            this.progressBar1.Click += new System.EventHandler(this.ProgressBar1_Click);
+           
             // 
             // groupBox2
             // 
@@ -128,7 +128,7 @@
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(143, 38);
             this.progressBar2.TabIndex = 3;
-            this.progressBar2.Click += new System.EventHandler(this.ProgressBar2_Click);
+          
             // 
             // label2
             // 

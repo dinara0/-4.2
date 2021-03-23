@@ -20,47 +20,13 @@ namespace WindowsFormsApp4
 
         private void NumericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            if (!(numericUpDown1.Value > numericUpDown2.Value))
-            {
-                numericUpDown2.Value = numericUpDown1.Value - 1;
-                progressBar2.Value = Decimal.ToInt32(numericUpDown2.Value);
-                textBox2.Text = numericUpDown2.Value.ToString();
-            }
-            progressBar1.Value = Decimal.ToInt32(numericUpDown1.Value);
-            textBox1.Text = numericUpDown1.Value.ToString();
-        }
+            
 
         private void Label1_Click(object sender, EventArgs e)
         {
            
         }
 
-
-        private void ProgressBar1_Click(object sender, EventArgs e)
-        {/*
-            if (!(progressBar1.Value > progressBar2.Value))
-            {
-                progressBar2.Value =progressBar1.Value-1;
-                numericUpDown2.Value = progressBar2.Value;
-                textBox2.Text = progressBar2.Value.ToString();
-            }
-            numericUpDown1.Value = progressBar1.Value;
-            textBox1.Text = numericUpDown1.Value.ToString();
-            */
-        }
-        
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-            /*if (!(Convert.ToInt32(textBox1.Text) > Convert.ToInt32(textBox2.Text)))
-            {
-                textBox2.Text = (Int32.Parse(textBox1.Text) - 1).ToString();
-                progressBar2.Value = Int32.Parse(textBox2.Text);
-                numericUpDown2.Value = Int32.Parse(textBox2.Text);
-                
-            }
-            progressBar1.Value = Int32.Parse(textBox1.Text);
-            numericUpDown1.Value = Int32.Parse(textBox1.Text);*/
-        }
 
         private void NumericUpDown2_ValueChanged(object sender, EventArgs e)
         {
@@ -79,35 +45,8 @@ namespace WindowsFormsApp4
 
         }
 
-        private void ProgressBar2_Click(object sender, EventArgs e)
-        {/*
-            if (!(progressBar1.Value > progressBar2.Value))
-            {
-                progressBar1.Value = progressBar2.Value + 1;
-                numericUpDown1.Value = progressBar1.Value;
-                textBox1.Text = progressBar1.Value.ToString();
-            }
-            numericUpDown2.Value = progressBar2.Value;
-            textBox2.Text = numericUpDown2.Value.ToString();*/
-    }
 
-    private void TextBox2_TextChanged(object sender, EventArgs e)
-        {
-          /*  if (!(Convert.ToInt32(textBox1.Text) > Convert.ToInt32(textBox2.Text)))
-            {
-                textBox1.Text = (Int32.Parse(textBox2.Text) + 1).ToString();
-                progressBar1.Value = Int32.Parse(textBox1.Text);
-                numericUpDown1.Value = Int32.Parse(textBox1.Text);
-
-            }
-            progressBar2.Value = Int32.Parse(textBox2.Text);
-            numericUpDown2.Value = Int32.Parse(textBox2.Text);*/
-        }
-
-        private void TextBox2_TabStopChanged(object sender, EventArgs e)
-        {
-
-        }
+   
 
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)
         {
@@ -144,17 +83,34 @@ namespace WindowsFormsApp4
             }
         }
 
-        /* public class numer
-         {
+         public class model         {
              private int value1, value2;
-             public void Set_value(int value, int fl)
+
+             public void Set_value1(int value, )
              {
-                 if (fl == 0)
+                value1 = value;
+                 if (value1 <= value2)
                  {
-                     if
+                    value2 = value1 - 1;
                  }
              }
-         }*/
+            public void Set_value2(int value, )
+            {
+                value2 = value;
+                if (value1 <= value2)
+                {
+                    value1 = value2 + 1;
+                }
+            }
+            public int Get_value1 ()
+            {
+                return value1;
+            }
+            public int Get_value2()
+            {
+                return value2;
+            }
+        }
     }
 
 }
